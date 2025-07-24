@@ -1,0 +1,183 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 210 20% 96%;
+    --foreground: 222 33% 18%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 33% 18%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 33% 18%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 239 84% 67%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 204 94% 94%;
+    --muted-foreground: 222 33% 50%;
+
+    --accent: 232 97% 90%;
+    --accent-foreground: 217 91% 60%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 204 94% 88%;
+    --input: 204 94% 88%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.75rem;
+    
+    /* Portfolio Design Tokens */
+    --royal-blue: 217 91% 60%;
+    --royal-blue-hover: 239 84% 67%;
+    --soft-sky: 204 94% 94%;
+    --charcoal-navy: 222 33% 18%;
+    --soft-lavender: 232 97% 90%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--royal-blue)), hsl(var(--royal-blue-hover)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--background)), hsl(var(--soft-lavender)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--soft-sky)));
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(var(--royal-blue) / 0.15);
+    --shadow-card: 0 8px 25px -8px hsl(var(--royal-blue) / 0.2);
+    --shadow-floating: 0 20px 40px -12px hsl(var(--royal-blue) / 0.25);
+    
+    /* Typography */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222 33% 15%;
+    --foreground: 0 0% 100%;
+
+    --card: 222 33% 18%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 222 33% 18%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 217 91% 65%;
+    --primary-foreground: 222 33% 15%;
+
+    --secondary: 239 84% 70%;
+    --secondary-foreground: 222 33% 15%;
+
+    --muted: 222 33% 20%;
+    --muted-foreground: 204 94% 80%;
+
+    --accent: 232 97% 85%;
+    --accent-foreground: 217 91% 60%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 222 33% 25%;
+    --input: 222 33% 25%;
+    --ring: 217 91% 65%;
+    
+    /* Dark mode overrides */
+    --royal-blue: 217 91% 65%;
+    --royal-blue-hover: 239 84% 70%;
+    --soft-sky: 222 33% 20%;
+    --charcoal-navy: 0 0% 100%;
+    --soft-lavender: 232 97% 85%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+  
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .shadow-floating {
+    box-shadow: var(--shadow-floating);
+  }
+  
+  .text-royal-blue {
+    color: hsl(var(--royal-blue));
+  }
+  
+  .text-charcoal-navy {
+    color: hsl(var(--charcoal-navy));
+  }
+  
+  .bg-royal-blue {
+    background-color: hsl(var(--royal-blue));
+  }
+  
+  .bg-soft-sky {
+    background-color: hsl(var(--soft-sky));
+  }
+  
+  .bg-soft-lavender {
+    background-color: hsl(var(--soft-lavender));
+  }
+}
