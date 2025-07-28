@@ -45,35 +45,39 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // Create FormData for FormSubmit
-      const form = new FormData();
-      form.append('name', formData.name);
-      form.append('email', formData.email);
-      form.append('subject', formData.subject);
-      form.append('message', formData.message);
+        // Create FormData for Formspree
+        const form = new FormData();
+        form.append("name", formData.name);
+        form.append("email", formData.email);
+        form.append("subject", formData.subject);
+        form.append("message", formData.message);
 
-      const response = await fetch('https://formsubmit.co/sabaumair.writes@gmail.com', {
-        method: 'POST',
-        body: form
-      });
-
-      if (response.ok) {
-        toast({
-          title: "Message sent successfully!",
-          description: "Thank you for reaching out. I'll get back to you within 24 hours.",
+        const response = await fetch("https://formspree.io/f/xldlnbbw", {
+            method: "POST",
+            body: form,
+            headers: {
+                Accept: "application/json",
+            },
         });
-        setFormData({ name: '', email: '', subject: '', message: '' });
-      } else {
-        throw new Error('Form submission failed');
-      }
+
+        if (response.ok) {
+            toast({
+                title: "Message sent successfully!",
+                description:
+                    "Thank you for reaching out. I'll get back to you within 24 hours.",
+            });
+            setFormData({ name: "", email: "", subject: "", message: "" });
+        } else {
+            throw new Error("Form submission failed");
+        }
     } catch (error) {
-      toast({
-        title: "Failed to send message",
-        description: "Please try again or contact me directly via email.",
-        variant: "destructive",
-      });
+        toast({
+            title: "Failed to send message",
+            description: "Please try again or contact me directly via email.",
+            variant: "destructive",
+        });
     } finally {
-      setIsSubmitting(false);
+        setIsSubmitting(false);
     }
   };
 
