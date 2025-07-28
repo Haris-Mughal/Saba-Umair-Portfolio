@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Download } from 'lucide-react';
-import heroImage from '@/assets/hero-image.jpg';
 const Hero = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -12,9 +11,7 @@ const Hero = () => {
     }
   };
   return <section id="hero" className="min-h-screen flex items-center relative overflow-hidden">
-      {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        <img src={heroImage} alt="Professional workspace" className="w-full h-full object-cover opacity-20" />
         <div className="absolute inset-0 gradient-hero"></div>
       </div>
 
