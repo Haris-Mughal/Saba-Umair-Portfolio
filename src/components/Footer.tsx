@@ -106,12 +106,6 @@ const Footer = () => {
                     </a>
                   </p>
                   <p className="text-secondary-foreground/80">
-                    <span className="font-medium">Phone:</span>{' '}
-                    <a href="tel:+92123456789" className="hover:text-secondary-foreground transition-colors duration-200">
-                      +92 123 456789
-                    </a>
-                  </p>
-                  <p className="text-secondary-foreground/80">
                     <span className="font-medium">Location:</span> Available Worldwide
                   </p>
                 </div>
