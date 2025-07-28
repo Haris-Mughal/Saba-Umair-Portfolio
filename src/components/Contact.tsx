@@ -85,16 +85,10 @@ const Contact = () => {
       href: "mailto:sabaumair.writes@gmail.com"
     },
     {
-      icon: Phone,
-      label: "Phone",
-      value: "+92 123 456789",
-      href: "tel:+92123456789"
-    },
-    {
       icon: MapPin,
       label: "Location",
       value: "Available Worldwide",
-      href: "#"
+      href: ""
     }
   ];
 
