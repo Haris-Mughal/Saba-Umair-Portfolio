@@ -5,6 +5,7 @@ import Services from '@/components/Services';
 import Portfolio from '@/components/Portfolio';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import Fiverr from '@/components/Fiverr';
 
 const Index = () => {
   return (
@@ -14,6 +15,7 @@ const Index = () => {
       <About />
       <Services />
       <Portfolio />
+      <Fiverr />
       <Contact />
       <Footer />
     </div>
