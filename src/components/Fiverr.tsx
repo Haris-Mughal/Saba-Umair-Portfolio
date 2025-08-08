@@ -60,7 +60,7 @@ const Fiverr = () => {
               <Button
                 size="lg"
                 className="bg-[#1dbf73] hover:bg-[#19a463] text-white font-semibold px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300 group"
-                onClick={() => window.open('https://www.fiverr.com/sabaumair2613', '_blank')}
+                onClick={() => window.open('https://www.fiverr.com/sabaumair_write', '_blank')}
               >
                 Visit My Fiverr Profile
                 <ExternalLink className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
